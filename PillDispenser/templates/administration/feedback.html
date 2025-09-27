@@ -12,11 +12,13 @@
             <td>guardian_name</td>
             <td>feedback</td>
         </tr>
+        {% for i in val %}
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.guardianid.name }}</td>
+            <td>{{ i.feedback }}</td>
         </tr>
+        {% endfor %}
     </table>    
 </body>
 </html>

@@ -15,17 +15,19 @@
             <td>Email</td>
             <td>Address</td>
         </tr>
+        {% for i in val %}
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ i.registernumber }}</td>
+            <td>{{ i.name}}</td>
+            <td>{{ i.gender}}</td>
+            <td>{{ i.phone}}</td>
+            <td>{{ i.email}}</td>
+            <td>{{ i.address}}</td>
             <td>
                 <a href="">DELETE</a>
             </td>
         </tr>
+         {% endfor %}
     </table>    
 </body>
 </html>

@@ -10,5 +10,7 @@ urlpatterns = [
     path('guardian',GuardianView.as_view(),name='guardian'),
     path('patient',PatientView.as_view(),name='patient'),
     path('AdminHome',AdminHome.as_view(),name='AdminHome'),
-  
+    path('sendreply/<int:id>/',sendreplyview.as_view(),name='sendreply'),
+
+    
 ]
