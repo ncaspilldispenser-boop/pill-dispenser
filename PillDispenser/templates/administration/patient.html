@@ -24,7 +24,7 @@
             <td>{{ i.email}}</td>
             <td>{{ i.address}}</td>
             <td>
-                <a href="">DELETE</a>
+                <a onclick="return confirm('Are you sure you need to delete this patient')" href="/DeletePatient/{{i.LOGINID.id}}">DELETE</a>
             </td>
         </tr>
          {% endfor %}

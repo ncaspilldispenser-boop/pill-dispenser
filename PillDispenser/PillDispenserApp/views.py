@@ -54,3 +54,10 @@ class PatientView(View):
 class AdminHome(View):
     def get(self, request):
         return render(request, 'administration/admin home.html')       
+    
+class DeletePatient(View):
+    def get(self,request,pk):
+        obj = LoginModel.objects.get(pk=pk)
+        obj.delete()
+        return HttpResponse('''<script>alert('deleted successfully');window.location='/patient'</script>''')
+        

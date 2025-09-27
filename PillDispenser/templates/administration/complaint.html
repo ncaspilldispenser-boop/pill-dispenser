@@ -18,12 +18,16 @@
             <td>{{ i.date }}</td>
             <td>{{ i.complaint }}</td>
             <td>{{ i.guardianid.name }}</td>
+            {% if i.reply  %}
+            <td>{{ i.reply }}</td>
+            {% else %}
             <td><form method="post" action="/sendreply/{{i.id}}/">
                 {% csrf_token %}
                 <input type="text" name="reply">
                 <input type="submit">
                 </form>
             </td>
+            {% endif %}
         </tr>
         {% endfor %}
     </table>    
