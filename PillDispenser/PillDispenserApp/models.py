@@ -25,14 +25,14 @@ class GuardianModel(models.Model):
     LOGINID = models.ForeignKey(LoginModel,on_delete=models.CASCADE,null=True, blank=True)
 
 class ComplaintModel(models.Model):
-    date = models.DateField(max_length=100, null=True, blank=True) 
+    date = models.DateField(auto_now_add=True, max_length=100, null=True, blank=True) 
     complaint = models.CharField(max_length=100, null=True, blank=True)
     reply = models.CharField(max_length=100, null=True, blank=True)
     guardianid = models.ForeignKey(GuardianModel,on_delete=models.CASCADE,null=True, blank=True)
 
 class FeedbackModel(models.Model):
     guardianid = models.ForeignKey(GuardianModel,on_delete=models.CASCADE,null=True, blank=True)
-    date = models.DateField(max_length=100, null=True, blank=True) 
+    date = models.DateField(auto_now_add=True, null=True, blank=True) 
     feedback = models.CharField(max_length=100, null=True, blank=True)
     rating = models.FloatField(max_length=100, null=True, blank=True) 
     

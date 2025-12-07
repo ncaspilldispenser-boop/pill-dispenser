@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+tu#&pdl+ysx#d*i@pi(^3)%uwf%azcu7v0cpg5ev_1kk-m$8u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'PillDispenserApp'
+    'PillDispenserApp',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
